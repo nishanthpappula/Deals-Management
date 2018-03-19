@@ -1,0 +1,20 @@
+<body>
+  <div class="jumbotron">
+    <center>
+      <h1>DEALS MANAGEMENT</h1>
+      <br/>
+      <br/>
+    </center>
+      <br/>
+      <center>
+        <% if @current_user %>
+        <% else %>
+          <h4>Click Here For StoreFront Registration</h4>
+
+          <a class="btn btn-primary btn-lg btn-xlarge" href="users/new" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true" >REGISTER</a>
+          <h4>Click here to Search for Deals</h4>
+          <a class="btn btn-primary btn-lg btn-xlarge" href="/uploads" role="button">DEALS</a>
+        <% end %>
+      </center>
+  </div>
+</body>

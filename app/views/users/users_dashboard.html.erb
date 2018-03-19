@@ -1,0 +1,14 @@
+<h1 align="center"><%= "#{@current_user.username.upcase}" %> This is your dashboard </h1>
+<hr/> 
+<center>
+	<% if @current_user.try(:type) == "Manager" %>
+		<%= link_to " Create A Deal ", new_upload_path, class: "btn btn-primary btn-lg btn-xlarge" %>
+		<br/>
+		<br/>
+		<%= link_to "View Your Deals >", upload_path(@current_user) , class: "btn btn-primary btn-lg btn-xlarge"%>
+	<% else %>
+		<br/>
+
+		<%= link_to "View all Deals to Edit >", uploads_admin_crud_path(@current_user),class: "btn btn-primary btn-lg btn-xlarge" %>
+	<% end %>
+</center>

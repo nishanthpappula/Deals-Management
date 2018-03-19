@@ -1,0 +1,22 @@
+<div class="center">
+  <%=will_paginate @uploads %>
+</div>
+
+<% @uploads.each do |upload| %>
+	<div class="row">
+	  <div class="col-sm-offset-4 col-sm-4">
+	  	<center>
+	    	<div class="thumbnail"> 
+			  	<img src="<%= upload.name.medium %>">
+					<br/>
+					<%= link_to "VIEW THIS DEAL",controller:"uploads",action:'show_uploads',:id=> upload.id %>
+			  	<br/>
+			   	<%= button_to 'DELETE',{:controller => :uploads,:action => 'delete',:id=>upload.id},class: "btn btn-primary btn-lg btn-xlarge" %>
+			   	</div>
+	     </center>
+		</div>
+	</div>
+<% end %>
+<div class="center">
+  <%=will_paginate @uploads_pag %>
+</div>

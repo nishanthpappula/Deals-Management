@@ -1,0 +1,36 @@
+<% if @uploads_pag.count >=1 %>
+
+	<h2 align="center">YOUR DEALS:</h2>
+	<hr>
+	<br/>
+	<div class="center">
+	  <%=will_paginate @uploads_pag %>
+	</div>
+	<% @uploads_pag.each do |upload| %>
+	<div class="row">
+	  <div class="col-sm-offset-4 col-sm-4">
+	  	<center>
+	    	<div class="thumbnail"> 
+					<img src="<%= upload.name.medium %>">
+					<%= link_to "VIEW THIS DEAL",controller:"uploads",action:'show_uploads',:id=> upload.id ,class: "btn btn-primary btn-lg btn-xlarge"%>
+					<br/>
+				  <%= link_to "UPDATE DEAL",controller:"uploads",action:'edit',:id=> upload.id,class: "btn btn-primary btn-lg btn-xlarge" %>
+				  <br/>
+				
+				  <%= button_to 'DELETE',{:controller => :uploads,:action => 'reject',:id=>upload.id},class: "btn btn-primary btn-lg btn-xlarge" %>
+				</div>
+			</center>
+		 </div>
+		</div>
+	<% end %>
+	<div class="center">
+	  <%= will_paginate @uploads_pag %>
+	</div>
+<%else%>
+	<h2 align="center"> Sorry You Don't have any deals </h2>
+	<hr>
+<% end %>
+<center>
+	<a class="btn btn-primary btn-lg btn-xlarge" href="/users/users_dashboard" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true">BACK</a>
+	
+</center>

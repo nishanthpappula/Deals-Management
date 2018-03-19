@@ -1,0 +1,127 @@
+<h1 align="center">Update Here</h1>
+<hr/>
+<% if @user.errors.any? %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h2 class="panel-title">
+          </h2>
+          <div class="panel-body">
+            <ul></ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li>
+                <%= msg %>
+              </li>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<%end %>
+
+<div class="well col-xs-8 col-xs-offset-2" >
+
+<div class='row'%>
+  <div class='col-sm-offset-1 col-sm-18'>
+    <%= form_for( @user,url: user_path(@user),as: :user ,:html =>{class: "form-horizontal",role:"form"}) do |f| %>
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :email, 'EMAIL:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :email, placeholder: "nish@gmail.com", autofocus: true,class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :username, 'USERNAME:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :username, placeholder: "username", autofocus: true,class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :password, 'PASSWORD:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :password, 'PASSWORD CONFIRMATION:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.password_field :password_confirmation, class: "form-control" %>
+        </div>
+      </div>
+      
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :phone_number, 'PHONE NUMBER:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :phone_number, placeholder: "phone number", autofocus: true,class: "form-control" %>
+        </div>
+      </div>
+      
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :store_name, 'STORENAME:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :store_name,placeholder: "store name", autofocus: true, class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :type_of_store, 'TYPE OF STORE:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.select(:type_of_store, options_for_select([['grocery','grocery'],['Stationary','stationary'],['SuperMarket','Supermarket'],['Bakery','Bakery']])) %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :location, 'LOCATION:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :location,placeholder: "location", autofocus: true, class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :street, 'STREET:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :street,placeholder: "street", autofocus: true, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :pincode, 'PINCODE:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :pincode,placeholder: "pincode", autofocus: true, class: "form-control" %>
+        </div>
+      </div>
+     
+     <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+          <center><%= f.submit 'UPDATE',class: "btn btn-primary btn-lg btn-xlarge" %></center>
+        </div>
+      </div>
+      
+    <%end %>
+  </div>
+</div>
+</div>
+<div class="form-group">
+        <div class="col-sm-offset-2 col-sm-8">
+
+<center><%= link_to "< Back", users_users_dashboard_path,class: "btn btn-primary btn-lg btn-xlarge"  %></center>
+</div>
+</div>

@@ -1,0 +1,113 @@
+<h1 align="center">New Upload</h1>
+<hr>
+<% if @upload.errors.any? %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h2 class="panel-title">
+          </h2>
+          <div class="panel-body">
+            <ul></ul>
+            <% @upload.errors.full_messages.each do |msg| %>
+              <li>
+                <%= msg %>
+              </li>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<%end %>
+<div class="well col-xs-8 col-xs-offset-2" >
+
+<div class='row'%>
+  <div class='col-sm-offset-1 col-sm-18'>
+    <%=  form_for(@upload, hmtl: { multipart: true } ,:html =>{class: "form-horizontal",role:"form"}) do |f| %>
+       <%= f.label :name ,"FILE OF INPUT" %><br>
+    <%= f.file_field :name %>
+    <br/>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :name_of_product, 'NAME OF PRODUCT:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :name_of_product, placeholder: "name of product", autofocus: true,class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :original_cost, 'ORIGINAL Cost:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :original_cost, class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :present_cost, 'PRESENT COST:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :present_cost, class: "form-control" %>
+        </div>
+      </div>
+      
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :description_of_product, 'DESCRIPTION OF COST:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :description_of_product,class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :stocks_left, 'STOCKS LEFT:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :stocks_left, class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :offer_deadline, 'OFFER DEADLINE:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :offer_deadline,placeholder: "Enter in days",autofocus: true,class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :location, 'LOCATION:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :location,placeholder: "location", autofocus: true, class: "form-control" %>
+        </div>
+      </div>
+       <div class="form-group">
+        <div class="control-label col-sm-2">
+         <%= f.label :street, 'STREET:' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :street,placeholder: "street", autofocus: true, class: "form-control" %>
+        </div>
+      </div>
+     
+     <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+         <center> <%= f.submit 'UPLOAD',class: "btn btn-primary btn-lg btn-xlarge" %></center>
+        </div>
+      </div>
+    
+    <%end %>
+
+</div>
+</div>
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+			<center><%= link_to '< Back', users_users_dashboard_path ,class: "btn btn-primary btn-lg btn-xlarge"%></center>
+		</div>
+</div>

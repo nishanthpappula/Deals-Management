@@ -1,0 +1,101 @@
+$navbar-default-bg: #4F4D4D;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+#logo{
+	float: left; 
+	font-size: 1.7em;
+	color: black;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+
+}
+#xyz{
+	color:white;
+	font-size: 1.2em;
+}
+
+body{
+	background-color: #C1B9B9;  
+}
+.glyphicon-user{
+	color: white ;
+	
+}
+.glyphicon-off{
+	color: white ;
+	
+}
+.glyphicon-home-back{
+	color: white ;
+	
+}
+
+
+#logo:hover{
+	color: white;
+	text-decoration: none;
+}
+
+.center{
+	text-align: center;
+}
+
+.jumbotron{
+	height: 500px;
+	background-image: asset-url('ecommerce-2140603__340.jpg');
+	background-size: cover;
+	width: 1200px;
+
+	
+}
+
+.jumbotron h1{
+	color: black;
+	text-align:center;
+	margin_bottom:30px;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+.jumbotron h4{
+	color: black;
+	text-align:center;
+	margin_bottom:30px;
+	letter-spacing: -1px;
+	font-weight: bold;
+	
+}
+.btn-xlarge{
+	font-size: 0.8em;
+	background-color: #C1B9B9; 
+	color: black;
+	
+}
+
+.btn-xs{
+	font-size:1.7em;
+	background: #808080;
+	
+	align: right;
+}
+
+.thumbnail{
+	text-align :center;
+}
+
+p{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h5{
+	
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

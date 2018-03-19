@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+  </head>
+  <body>
+    <h1 align="left">
+      Welcome to Deals Management <%="#{@user.username}" %>
+    </h1>
+    <p style="color:blue;">
+      <b>Thank You for Registering in Deals Management</b>
+    </p>
+    <p style="color:blue;">
+      <b>We are confirming your registration.Now you can successfully signin into DealsManagement</b>
+    </p>
+
+    <p style="color:green;">
+      <b>your username is: <%="#{@user.username}" %></b>
+      <br/>
+    </p>
+    <p>
+      To login to the site, just follow this link:
+      <%= link_to 'signin',users_signin_url %>
+    </p>
+    <p>Thanks for joining and have a great day</p>
+    <p>&copy; Nishanth Pappula</p>
+  </body>
+</html>

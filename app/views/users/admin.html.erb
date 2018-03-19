@@ -1,0 +1,16 @@
+<h1 align="center">ADMIN SIGNIN HERE</h1>
+<hr/>
+<%= form_tag users_admin_login_path, method: 'get' do %>
+  <%= label_tag :username ,'UserName' %>
+  <br/>
+  <br/>
+  <%= text_field_tag :username, params[:username] %>
+  <br/>
+  <%= label_tag :password , 'Password' %>
+  <br/>
+  <br/>
+  <%= password_field_tag :password %>
+  <br/>
+  <br/>
+  <%= submit_tag "Sign in",class: "btn btn-primary btn-lg btn-xlarge"  %>
+<% end %>

@@ -1,0 +1,25 @@
+
+<div class="well col-xs-8 col-xs-offset-2" >
+	<center>
+		<img src="<%= @uploads.name.medium %>">
+	  <br/>
+	 	<h5>NAME OF PRODUCT:<%= @uploads.name_of_product %> </h5>
+		<br/>
+	  <h5>USERNAME: <%= @uploads.uploaded_by.username %> </h5>
+	 	<br/>
+	 	<h5>LOCATION:<%= @uploads.location %> </h5>
+		<br/>
+		<h5>STREET:<%= @uploads.street%> </h5>
+		<br/>
+    <h5>ORIGINAL COST: <%= @uploads.original_cost %></h5>
+		<br/>
+		<h5>PRESENT COST: <%= @uploads.present_cost %> </h5>
+		<br/>
+		<h5>DESCRIPTION OF PRODUCT: <%= @uploads.description_of_product %></h5>
+		<br/>
+		<h5>STOCKS LEFT: <%= @uploads.stocks_left %> </h5>
+		<br/>
+		<h5>OFFER DEADLINE: <%= @uploads.offer_deadline%> </h5>
+		<%=link_to "< Back", upload_path(@uploads),class: "btn btn-primary btn-lg btn-xlarge" %>
+	</center>
+</div>

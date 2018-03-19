@@ -1,0 +1,24 @@
+<h1 align="center">Your Profile </h1>
+<div class="well col-xs-8 col-xs-offset-2" >
+
+	<h5 align="center">USERNAME:  <%= "#{@current_user.username.upcase}" %></h5>
+		
+	<h5 align="center">EMAIL:  <%= "#{@current_user.email}" %> </h5>
+
+	<h5 align="center">PHONE NUMBER:  <%= "#{@current_user.phone_number}" %> </h5>
+
+	<h5 align="center">STORE NAME:  <%= "#{@current_user.store_name.upcase}" %> </h5>
+
+	<h5 align="center">TYPE OF STORE:  <%= "#{@current_user.type_of_store.upcase}" %> </h5>
+
+	<h5 align="center">LOCATION:  <%= "#{@current_user.location.upcase}" %> </h5>
+
+	<h5 align="center">STREET:  <%= "#{@current_user.street}" %> </h5>
+
+	<h5 align="center">PINCODE:  <%= "#{@current_user.pincode}" %> </h5>
+
+	<center>
+
+		<%= link_to "< Back", users_users_dashboard_path ,class: "btn btn-primary btn-lg btn-xlarge"%>
+	</center>
+</div>

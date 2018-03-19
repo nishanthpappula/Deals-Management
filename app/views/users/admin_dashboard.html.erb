@@ -1,0 +1,50 @@
+<% if @managers.count >=1 %>
+	<div class="row">
+	  <div class="col-xs-8 col-xs offset-2">
+	    <div class="well well-lg">
+	      <table>
+	        <thead>
+	          <tr>
+	            <th>Your Requests </th>
+	          </tr>
+	        </thead>
+	        <% @managers.each do |manager| %>
+	          <tr>
+	            <td>
+	              <%= manager.username %>
+	            </td>
+	            <td>
+	              <%= button_to 'ACCEPT',{:controller => :users,:action => 'accept',:id =>manager.id},method: :post,class: "btn btn-primary btn-lg btn-xlarge"  %>
+	            </td>
+	            <td>
+	              <%= button_to 'REJECT',{:controller => :users,:action => 'reject',:id =>manager.id},method: :post,class: "btn btn-primary btn-lg btn-xlarge"  %>
+	            </td>
+	          </tr>
+	        <% end %>
+	      </table>
+	    </div>
+	  </div>
+	</div>
+<%else %>
+	<div class="row">
+	  <div class="col-xs-8 col-xs offset-2">
+	    <div class="well well-lg">
+	      <table>
+	        <thead>
+	          <tr>
+	            <th>You have no requests </th>
+	          </tr>
+	        </thead>
+	      </table>
+	    </div>
+	   </div>
+	</div>
+<% end %>
+
+
+<!-- var currentDate = Date.now()
+
+setInterval(function(){
+ currentDate = currentDate - 1000;
+ console.log(new Date(currentDate))
+  },1000) -->

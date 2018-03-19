@@ -1,0 +1,45 @@
+<h2 align="center"> Search Deals Based On Your Preferred Location </h2>
+<hr>
+<center>
+<%= form_tag(uploads_path,method: :get) do %>
+  <%= text_field_tag :location,params[:location],placeholder: "Enter preferred location", autofocus: true %>
+  <span class="glyphicon glyphicon-search" aria-hidden="true">
+  <%= submit_tag 'Search',name: nil,class: "btn btn-primary btn-lg btn-xlarge" %>
+<% end %>
+</center>
+<br/>
+<br/>
+
+<div class="center">
+  <%=will_paginate @uploads_paginate %>
+</div>
+
+
+
+<% @uploads.each do |upload| %>
+
+	<div class="row">
+  		<div class="col-sm-offset-4 col-sm-4">
+  			<center>
+    			<div class="thumbnail"> 
+    			
+		  			<img src="<%= upload.name.medium %>">
+						<%= link_to "VIEW THIS DEAL",controller:"uploads",action:'deals',:id=> upload.id%>
+					
+					</div>
+     		</center>
+			</div>
+	</div>
+<% end %>
+
+<div class="center">
+  <%=will_paginate @uploads_paginate %>
+</div>
+
+<br/>
+<br/>
+<center>
+<a class="btn btn-primary btn-lg btn-xlarge" href="/" role="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true">BACK</a>
+
+
+</center>

@@ -1,0 +1,33 @@
+<div class="well col-xs-8 col-xs-offset-2" >
+  <center>
+	  <img src="<%= @uploads.name.medium %>">
+	 	<br/>
+	 	<p>NAME OF PRODUCT:<%= @uploads.name_of_product %> </p>
+		<br/>
+	  <p>STORE NAME: <%= @uploads.uploaded_by.store_name %> </p>
+	 	<br/>
+	 	<p>NAME OF THE MANAGER: <%= @uploads.uploaded_by.username %> </p>
+	  <br/>
+	  <p><strike>ORIGINAL COST: <%= @uploads.original_cost %></strike> </p>
+		<br/>
+		<p>PRESENT COST: <%= @uploads.present_cost %> </p>
+		<br/>
+		<p>DESCRIPTION OF PRODUCT: <%= @uploads.description_of_product %></p>
+		<br/>
+		<p>STOCKS LEFT: <%= @uploads.stocks_left %> </p>
+		<br/>
+		<p>OFFER DEADLINE: <%= @uploads.offer_deadline%> </p>
+		<br/>
+		<p>LOCATION:<%= @uploads.location %> </p>
+		<br/>
+		<p>STREET:<%= @uploads.street%> </p>
+		<br/>
+		<p>PHONE NUMBER:<%= @uploads.uploaded_by.phone_number %></p>
+		<br/>
+
+		<%=link_to "< Back",:back,class: "btn btn-primary btn-lg btn-xlarge"  %>
+	</center>
+</div>
+ 
+
+			
